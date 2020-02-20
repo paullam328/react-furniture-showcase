@@ -1,0 +1,46 @@
+
+<?php
+    header("Access-Control-Allow-Origin: *");
+    
+    $hostname = 'localhost';
+    $username = 'showcasedemo';
+    $password = 'demoShowcase';
+    $database = 'furnitureshowcase';
+
+    $secretKey = "mySecretKey"; # change this val to match val stored in C#
+
+    function debug_to_console($data) {
+        $output = $data;
+        if (is_array($output))
+            $output = implode(',', $output);
+
+        echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+    }
+
+    #connect:
+    try {
+        $dbh = new PDO('mysql:host='. $hostname . ';dbname='. $database, $username, $password);
+        debug_to_console("Test");
+        echo '<h1>Login Success!</h1></pre>';
+    } catch (PDOException $e) {
+        echo '<h1>An error has occured.</h1><pre>', $e->getMessage() ,'</pre>';
+    }
+
+    #get data:
+    if (isset($_POST['id']))
+    {
+        $id = $_POST['id'];
+        $val = $dbh->prepare('SELECT * FROM furniture WHERE id=:id');
+            try {
+                $val->execute($_POST);
+                $sth = $val->fetchAll(PDO::FETCH_ASSOC); 
+                print_r($sth);
+            } catch (Exception $e) {
+                echo '<h1>An error has occured.</h1><pre>', $e->getMessage() ,'</pre>';
+            }
+    }
+    else
+    {
+        echo 'no id supplied';
+    }
+?>

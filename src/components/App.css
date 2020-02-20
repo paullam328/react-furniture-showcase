@@ -1,0 +1,100 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.folder-active i,
+.chart-active i,
+.building-active i,
+.database-active i,
+.settings-active i,
+.user-active i {
+  color:white !important;
+}
+
+.app-nav-item {
+  overflow: hidden;
+}
+
+.app-nav-item div div {
+  margin-top: 5px;
+}
+
+.sidenav---sidenav-toggle---1KRjR {
+  background-image: url('./simple5d.png') !important;
+  background-repeat: no-repeat;
+  background-size:50px;
+  background-position: center;
+}
+.sidenav---sidenav-toggle---1KRjR span {
+  visibility: hidden;
+}
+
+.sidenav---sidenav-nav---3tvij {
+  padding-top: 100px !important;
+}
+
+.content {
+  padding-left:80px;
+}
+
+.card-header {
+  text-align: left;
+}
+
+/* Loading bars: */
+/* #__ReactUnityWebGL_1__ * {border: 0; margin: 0; padding: 0} */
+/* #__ReactUnityWebGL_1__ {position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);} */
+
+.content .logo, .progress, .loadingText {position: absolute; left: 50%; top: 45%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+.content .logo {background: url('../TemplateData/progressLogo.Light.png') no-repeat center / contain; width: 32%; height: 30%; max-width: 200px; max-height: 185px;}
+.content .progress {height: 18px; width: 141px; top: 70%; height: 5%; width: 20%;}
+.content .progress .empty {background: url('../TemplateData/progressEmpty.Light.png') no-repeat left / cover; float: right; width: 100%; height: 100%; display: inline-block;}
+.content .progress .full {background: url('../TemplateData/progressFull.Light.png') no-repeat right / cover; float: left; width: 0%; height: 100%; display: inline-block;}
+
+.content .logo.Dark {background-image: url('../TemplateData/progressLogo.Dark.png');}
+.content .loadingText {color:white; top: 63%; font-size: 1.5vw; font-family: Arial Black;}
+
+/* #__ReactUnityWebGL_1__ .progress.Dark .empty {background-image: url('../TemplateData/progressEmpty.Dark.png');}
+#__ReactUnityWebGL_1__ .progress.Dark .full {background-image: url('../TemplateData/progressFull.Dark.png');} */
+
+.content .footer {margin-top: 5px; height: 38px; line-height: 38px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px;}
+.content .footer .webgl-logo, .title, .fullscreen {height: 100%; display: inline-block; background: transparent center no-repeat;}
+.content .footer .webgl-logo {background-image: url('../TemplateData/webgl-logo.png'); width: 204px; float: left;}
+.content .footer .title {margin-right: 10px; float: right;}
+.content .footer .fullscreen {background-image: url('../TemplateData/fullscreen.png'); width: 38px; float: right;}
